@@ -11,6 +11,7 @@ public class Krb5SqlServerDriver extends Krb5SqlServer {
     // This static block inits the driver when the class is loaded by the JVM.
     static {
         try {
+            System.out.println(" **************** Calling the driver **********************");
             DriverManager.registerDriver(new Krb5SqlServerDriver());
         } catch (SQLException e) {
             throw new RuntimeException( "Failed to register Krb5SqlServerDriver: " + e.getMessage());
